@@ -1,0 +1,15 @@
+{
+  "name": "turbo-xml",
+  "script": "server.js",
+  "log_date_format": "YYYY-MM-DD HH:mm Z",
+  "instances": 0,
+  "min_uptime": "1000s",
+  "max_memory_restart": "512M",
+  "cron_restart": "1 0 * * *",
+  "watch": false,
+  "merge_logs": true,
+  "exec_mode": "cluster",
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
