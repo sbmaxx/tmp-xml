@@ -12,12 +12,12 @@ app.use(bodyParser.json());
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 
-app.get('/api/turbo', (req, res) => {
+app.get('/turbo/api/xml', (req, res) => {
     res.set('Content-Type', 'text/xml');
     fs.createReadStream(xmlPath).pipe(res);
 });
 
-app.post('/api/turbo', (req, res) => {
+app.post('/turbo/api/xml', (req, res) => {
     if (!req.body.xml) {
         return 'empty content';
     }
